@@ -29,3 +29,7 @@ This repo contains the following folders:
 
 ## Quick Start
 1. All file locations should be stored in the files.json file. Each notebook references a specific key-value pair associated with the files location. Be warned there are quite a few file locations
+
+- Running the models:
+  1. The Neural Network has several dependencies and is the hardest to setup.  If running in Colab, make sure you're using a CPU runtime
+  2. Make sure that NN model has access to the NN_Model.py file which contain the necessary dependencies
