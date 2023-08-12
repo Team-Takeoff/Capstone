@@ -24,5 +24,8 @@ This repo contains the following folders:
 - data_aquisition: out data came from the sources mentioned above.  Our processes for extracting the data and joining together can be found in these notebooks.
 - data_preprocessing: contains folders that entail transforming our data into features for modeling
 - modeling: this folder contains all of the models for this project and the associated notebooks to evaluate model performance.
+- assets: this folder contains png files containing our visualizations, a copy of the NOAA manual with details about the weather variables we used.
+
 
 ## Quick Start
+1. All file locations should be stored in the files.json file. Each notebook references a specific key-value pair associated with the files location. Be warned there are quite a few file locations
