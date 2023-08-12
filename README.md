@@ -27,6 +27,7 @@ This repo contains the following folders:
 - modeling: this folder contains all of the models for this project and the associated notebooks to evaluate model performance.
 - assets: this folder contains png files containing our visualizations, a copy of the NOAA manual with details about the weather variables we used.
 
+You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to understand the sequencing of the notebooks
 
 ## Quick Start
 1. All file locations should be stored in the files.json file as key-value pairs where the values are the file locations. For ease of access, all models and final training tests sets are included in the models and data folder respectively and their relative locations are documented in the files.json file in this repo. You may need to update these locations based on your folder structure.
