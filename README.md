@@ -1,4 +1,5 @@
-# Capstone
+# Capstone ![Logo](https://i.imgur.com/AJFRhVe.png)
+
 Welcome to our Capstone Project!  We are Team Take-off, a group of 3 University of Michigan Master of Applied Data Science students who came together to work on our final (aka Capstone) project for the program. This project represents our enthusiasm for using Data Science skills to understand (and predict) flight delays.  We hope you find this repo as interesting and fun as we did making it!
 
 ## Project Description
