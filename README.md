@@ -28,8 +28,26 @@ This repo contains the following folders:
 
 
 ## Quick Start
-1. All file locations should be stored in the files.json file. Each notebook references a specific key-value pair associated with the files location. Be warned there are quite a few file locations
+1. All file locations should be stored in the files.json file as key-value pairs where the values are the file locations. For ease of access, all models and final training tests sets are included in the models and data folder respectively and their relative locations are documented in the files.json file in this repo. You may need to update these locations based on your folder structure.
 
-- Running the models:
-  1. The Neural Network has several dependencies and is the hardest to setup.  If running in Colab, make sure you're using a CPU runtime
-  2. Make sure that NN model has access to the NN_Model.py file which contain the necessary dependencies
+- Running the classification models:
+  1. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This will load all of the package dependencies and the pretrained models and can be used to execute the visualizations/metrics seen in the notebook. 
+  2. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share a separate pipeline pkl object which should be used to transform the test data before prediction. Make sure that joblib package is imported
+     ```
+     import joblib
+     lr = joblib.load(files['Models']['LR'])
+     rf = joblib.load(files['Models']['RF'])
+     gb = joblib.load(files['Models']['GB'])
+     preprocessor = joblib.load(files['Models']['pipe'])
+     ```
+  3. The Neural Network has several dependencies and can be challenging to setup.  If running in Colab, make sure you're using a CPU runtime (to avoid any runtime issues) and that the NN_Model.py files is accessible to the model:
+     ```
+     import sys
+     project_dir = files['Dirs']['Main']
+     model_dir = files['Dirs']['Model']
+     sys.path.append(model_dir)
+     sys.path.append(project_dir + model_dir)
+
+     # files from main and model directories available for import
+     from NN_model import custom_f1, XTransform, create_model
+     ``` 
