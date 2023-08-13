@@ -99,4 +99,4 @@ all the necessary library imports are listed below:
 
 To get started, the easiest way is to use this notebook [NetworkAnalysisVis_FlightLevel](https://github.com/Team-Takeoff/Capstone/blob/main/models/NetworkAnalysisVis_FlightLevel.ipynb) to get the model created.
 
-Then using this notebook [Network_Flight_SIR_Rates] (https://github.com/Team-Takeoff/Capstone/blob/main/models/Network_Flight_SIR_Rates.ipynb), you will find the SIRS model we used to find the beta and gamma rates from the data. You will also find additional geo-network visualization with plotly.
+Then using this notebook [Network_Flight_SIR_Rates](https://github.com/Team-Takeoff/Capstone/blob/main/models/Network_Flight_SIR_Rates.ipynb), you will find the SIRS model we used to find the beta and gamma rates from the data. You will also find additional geo-network visualization with plotly.
