@@ -10,8 +10,8 @@ Have you ever been to an airport and waited and waited and waited for a flight? 
 
 We encourage you to read our Final Report to learn more about our motiviations, inspirations, methods and findings.
 
-Noteworthy:
- - Our analysis is primarily centered around the Dallas / Fort Worth Airport.  This airport was chosen due to it's importance in the US aiport network or its high centrality to other nodes in the airport network.
+**Noteworthy**:
+ - Our analysis is primarily centered around the Dallas / Fort Worth Airport.  This airport was chosen due to it's importance in the US aiport network (i.e. its high centrality to other nodes in the airport network).
  - All of our data used in this project is open source and available to anyone to use, modify, and redistribute without any restrictions. You do not need to obtain a license to access our data.
 
 
