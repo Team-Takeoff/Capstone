@@ -42,7 +42,7 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
      ```
      ### Weather Prediction Classifiers
 2. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This loads all dependencies, pretrained models,test data transformation and prediction, and visualizations/metrics seen in the notebook. The following is a brief snapshot of how to get the models and pipeline ready to receive data:
-    1. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share the same pipeline pkl object which should be used to transform the test data before prediction. Make sure the ```joblib``` package is imported before loading the models:
+3. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share the same pipeline pkl object which should be used to transform the test data before prediction. Make sure the ```joblib``` package is imported before loading the models:
      ```
      import joblib
      ```
@@ -54,7 +54,12 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
      preprocessor = joblib.load(files['Models']['pipe'])
      ```
      
-    2. The Neural Network has several dependencies and can be challenging to setup.  Make sure you're using a CPU runtime (to avoid any issues) and that the NN_Model.py files is accessible to the model:
+4. The Neural Network has several dependencies and can be challenging to setup. Make sure you're using a CPU runtime (to avoid any issues).  Install and import both the dill and scikeras packages:
+    ```
+       !pip install dill
+       !pip install scikeras
+    ```
+    Make the NN_Model.py files accessible to the model:
      ```
      import sys
      project_dir = files['Dirs']['Main']
@@ -71,8 +76,8 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
    ```
         from tensorflow.keras.models import load_model
    
-        nn = joblib.load(files['Model']['NN_pipe'])
-        model = load_model(files['Model']['NN_Mod'],
+        nn = joblib.load(files['Models']['NN_pipe'])
+        model = load_model(files['Models']['NN_mod'],
                                  custom_objects={'create_model': create_model,
                                                  'custom_f1':'custom_f1})
    ```
