@@ -58,6 +58,9 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
     ```
        !pip install dill
        !pip install scikeras
+
+       import dill
+       import scikeras
     ```
     Make the NN_Model.py files accessible to the model:
      ```
