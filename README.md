@@ -33,13 +33,14 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
 
 
 ## Quick Start
-### Weather Prediction Classifiers
+
 1. We used a files.json file to make file location references easier using key-value pairs. All models and final training tests sets are included in the models and data folder respectively and their relative locations are documented in the files.json file in this repo. You may need to update these locations based on your project. Once done, it's a matter of just loading it from a specified path to the json file:
    
      ```import json
         path_to_files_json = 'path to files.json'
         files = json.load(open(path_to_files_json,'r'))
      ```
+     ### Weather Prediction Classifiers
 2. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This loads all dependencies, pretrained models,test data transformation and prediction, and visualizations/metrics seen in the notebook. The following is a brief snapshot of how to get the models and pipeline ready to receive data:
     1. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share the same pipeline pkl object which should be used to transform the test data before prediction. Make sure the ```joblib``` package is imported before loading the models:
      ```
