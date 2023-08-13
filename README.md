@@ -24,10 +24,10 @@ Data was extracted from the following locations:
 ## Project Notebooks and Resources
 
 This repo contains the following folders:
-- [data_acquisition](data_acquisition): out data came from the sources mentioned above.  Our processes for extracting the data and joining together can be found in these notebooks.
+- [data_acquisition](data_acquisition): The processes for extracting the data and joining together can be found in these notebooks.
 - [data_preprocessing](data_preprocessing): contains folders that entail transforming our data into features for modeling
-- [modeling](modeling): this folder contains all of the models for this project and the associated notebooks to evaluate model performance.
-- [assets](assets): this folder contains png files containing our visualizations, a copy of the NOAA manual with details about the weather variables we used.
+- [modeling](modeling): contains all of the models, training and evaluation notebooks.
+- [assets](assets): contains various project resources including visualization image files, a copy of the NOAA manual and data dictionary.
 
 You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to understand the sequencing of the notebooks
 
