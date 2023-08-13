@@ -40,9 +40,8 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
         path_to_files_json = 'path to files.json'
         files = json.load(open(path_to_files_json,'r'))
      ```
-2. Running the classification models:
-    1. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This will load all of the package dependencies and the pretrained models transform and predict on the test data, and execute the visualizations/metrics seen in the notebook. 
-    2. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share a separate pipeline pkl object which should be used to transform the test data before prediction. Make sure that joblib package is imported:
+2. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This will load all of the package dependencies and the pretrained models transform and predict on the test data, and execute the visualizations/metrics seen in the notebook. Below is a brief snapshot of how to get the models and pipeline ready to receive data:
+    1. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share the same pipeline pkl object which should be used to transform the test data before prediction. Make sure that joblib package is imported before loading the models:
      ```
      import joblib
      lr = joblib.load(files['Models']['LR'])
@@ -50,7 +49,8 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
      gb = joblib.load(files['Models']['GB'])
      preprocessor = joblib.load(files['Models']['pipe'])
      ```
-  3. The Neural Network has several dependencies and can be challenging to setup.  If running in Colab, make sure you're using a CPU runtime (to avoid any runtime issues) and that the NN_Model.py files is accessible to the model:
+     
+    2. The Neural Network has several dependencies and can be challenging to setup.  If running in Colab, make sure you're using a CPU runtime (to avoid any issues) and that the NN_Model.py files is accessible to the model:
      ```
      import sys
      project_dir = files['Dirs']['Main']
@@ -62,6 +62,17 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
      from NN_model import custom_f1, XTransform, create_model
      ```
      where ```custom_f1``` is the f1_metric, ```XTransform``` is the class that enables conversion of the input to a Tensor and ```create_model``` is the function to build a model.
+
+   Once the model dependencies are imported, you'll then need to load the model and associated dependencies and the pipeline:
+   ```
+        from tensorflow.keras.models import load_model
+   
+        nn = joblib.load(files['Model']['NN_pipe'])
+        model = load_model(files['Model']['NN_Mod'],
+                                 custom_objects={'create_model': create_model,
+                                                 'custom_f1':'custom_f1})
+   ```
+     
 
 ### Network Models
      
