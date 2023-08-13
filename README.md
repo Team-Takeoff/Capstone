@@ -33,7 +33,7 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
 
 
 ## Quick Start
-Weather Prediction Classifiers
+### Weather Prediction Classifiers
 1. All file locations should be stored in the files.json file as key-value pairs where the values are the file locations. For ease of access, all models and final training tests sets are included in the models and data folder respectively and their relative locations are documented in the files.json file in this repo. You may need to update these locations based on your folder structure. Once done, it's a matter of just loading it from a specified path:
    
      ```import json
@@ -62,3 +62,6 @@ Weather Prediction Classifiers
      from NN_model import custom_f1, XTransform, create_model
      ```
      where ```custom_f1``` is the f1_metric, ```XTransform``` is the class that enables conversion of the input to a Tensor and ```create_model``` is the function to build a model.
+
+### Network Models
+     
