@@ -13,7 +13,7 @@ We encourage you to read our Final Report to learn more about our motiviations, 
 Things to be aware of:
  - Our analysis is primarily centered around the Dallas / Fort Worth Airport.  This airport was chosen due to it's importance in the US aiport network or its high centrality to other nodes in the airport network.   
 
-## External Data Resources/URLS
+## External Data Resources/Urls
 Data was extracted from the following locations:
  - Flight data from 2010-2023 extracted from [Bureau of Transportation Statistics Ontime Data](https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr)  
  - The Flight Data had tail numbers which we were able to use to extract details about the aircraft passing the tail numbers to [AeroBaseGroup](https://aerobasegroup.com/tail-number-lookup)
@@ -56,4 +56,5 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
 
      # files from main and model directories available for import
      from NN_model import custom_f1, XTransform, create_model
-     ``` 
+     ```
+     where ```custom_f1``` is the f1_metric, ```XTransform``` is the class that enables conversion of the input to a Tensor and ```create_model``` is the function to build a model.
