@@ -5,7 +5,7 @@ Welcome to our Capstone Project!  We are Team Take-off, a group of 3 University 
 ## Project Description
 
 Have you ever been to an airport and waited and waited and waited for a flight?  Have you ever thought to yourself, 'I wish I could've known in advance about the delay'? Or wondered how quickly that plane or airline was able to get back on schedule? If so, you're in the right place.  Our project dealt with these questions in the following way:
--  use several machine learning algorithms to learn a range of variables related to past flights, aircraft features and a tremendous amount of weather variables to predict whether a flight will be delayed or not
+-  use several machine learning algorithms to learn a range of variables related to past flights, aircraft features and a tremendous amount of weather variables to predict whether a flight will be delayed or not. These include Logistic Regression, Random Forest, Gradient Boosting and a Tensorflow/Keras Neural Network.
 -  Use network analysis to study flight delay propagation with Susceptible-Infected-Recovered-Susceptible (SIRS) modeling. The aim was to see how delays infect subsequent flights and how quickly they are able to recover. 
 
 We encourage you to read our Final Report to learn more about our motiviations, inspirations, methods and findings.
