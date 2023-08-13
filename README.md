@@ -17,24 +17,28 @@ Things to be aware of:
 Data was extracted from the following locations:
  - Flight data from 2010-2023 extracted from [Bureau of Transportation Statistics Ontime Data](https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr)  
  - The Flight Data had tail numbers which we were able to use to extract details about the aircraft passing the tail numbers to [AeroBaseGroup](https://aerobasegroup.com/tail-number-lookup)
- - We also incorporated weather data through the NOAA's website using an api key.
+ - We also incorporated weather data through the [NOAA's website](https://www.ncei.noaa.gov/data/global-hourly/archive/csv/) using an api key.
 
 ## Project Notebooks and Resources
 
 This repo contains the following folders:
-- data_aquisition: out data came from the sources mentioned above.  Our processes for extracting the data and joining together can be found in these notebooks.
-- data_preprocessing: contains folders that entail transforming our data into features for modeling
-- modeling: this folder contains all of the models for this project and the associated notebooks to evaluate model performance.
-- assets: this folder contains png files containing our visualizations, a copy of the NOAA manual with details about the weather variables we used.
+- [data_acquisition](data_acquisition): out data came from the sources mentioned above.  Our processes for extracting the data and joining together can be found in these notebooks.
+- [data_preprocessing](data_preprocessing): contains folders that entail transforming our data into features for modeling
+- [modeling](modeling): this folder contains all of the models for this project and the associated notebooks to evaluate model performance.
+- [assets](assets): this folder contains png files containing our visualizations, a copy of the NOAA manual with details about the weather variables we used.
 
 You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to understand the sequencing of the notebooks
 
 ## Quick Start
-1. All file locations should be stored in the files.json file as key-value pairs where the values are the file locations. For ease of access, all models and final training tests sets are included in the models and data folder respectively and their relative locations are documented in the files.json file in this repo. You may need to update these locations based on your folder structure.
-
-- Running the classification models:
-  1. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This will load all of the package dependencies and the pretrained models and can be used to execute the visualizations/metrics seen in the notebook. 
-  2. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share a separate pipeline pkl object which should be used to transform the test data before prediction. Make sure that joblib package is imported
+1. All file locations should be stored in the files.json file as key-value pairs where the values are the file locations. For ease of access, all models and final training tests sets are included in the models and data folder respectively and their relative locations are documented in the files.json file in this repo. You may need to update these locations based on your folder structure. Once done, it's a matter of just loading it from a specified path:
+   
+     ```import json
+        path_to_files_json = 'path to files.json'
+        files = json.load(open(path_to_files_json,'r'))
+     ```
+2. Running the classification models:
+    1. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This will load all of the package dependencies and the pretrained models and can be used to execute the visualizations/metrics seen in the notebook. 
+    2. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share a separate pipeline pkl object which should be used to transform the test data before prediction. Make sure that joblib package is imported:
      ```
      import joblib
      lr = joblib.load(files['Models']['LR'])
