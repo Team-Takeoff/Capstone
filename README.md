@@ -87,4 +87,16 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
      
 
 ### Network Models
-     
+The network analysis was created with pandas, scipy, networkX, and plotly
+all the necessary library imports are listed below:
+   ```
+        import pandas as pd
+        import networkx as nx
+        import plotly.graph_objects as go
+        from scipy.integrate import odeint
+        from scipy.optimize import minimize
+   ```
+
+To get started, the easiest way is to use this notebook [NetworkAnalysisVis_FlightLevel](https://github.com/Team-Takeoff/Capstone/blob/main/models/NetworkAnalysisVis_FlightLevel.ipynb) to get the model created.
+
+Then using this notebook [Network_Flight_SIR_Rates] (https://github.com/Team-Takeoff/Capstone/blob/main/models/Network_Flight_SIR_Rates.ipynb), you will find the SIRS model we used to find the beta and gamma rates from the data. You will also find additional geo-network visualization with plotly.
