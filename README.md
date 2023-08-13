@@ -63,7 +63,7 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
      ```
      where ```custom_f1``` is the f1_metric, ```XTransform``` is the class that enables conversion of the input to a Tensor and ```create_model``` is the function to build a model.
 
-   Once the model dependencies are imported, you'll then need to load the model and associated dependencies and the pipeline:
+   Once the model dependencies are imported, you'll then need to load the model with dependencies as well as the pipeline:
    ```
         from tensorflow.keras.models import load_model
    
