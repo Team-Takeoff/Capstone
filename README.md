@@ -10,7 +10,7 @@ Have you ever been to an airport and waited and waited and waited for a flight? 
 
 We encourage you to read our Final Report to learn more about our motiviations, methods and findings.
 
-Of note:
+Noteworthy:
  - Our analysis is primarily centered around the Dallas / Fort Worth Airport.  This airport was chosen due to it's importance in the US aiport network or its high centrality to other nodes in the airport network.
  - All of our data used in this project is open source and available to anyone to use, modify, and redistribute without any restrictions. You do not need to obtain a license to access our data.
 
@@ -41,7 +41,7 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
         files = json.load(open(path_to_files_json,'r'))
      ```
 2. Running the classification models:
-    1. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This will load all of the package dependencies and the pretrained models and can be used to execute the visualizations/metrics seen in the notebook. 
+    1. The best place to start is simply running the [Test_Models notebook](/models/Test_Models.ipynb).  This will load all of the package dependencies and the pretrained models transform and predict on the test data, and execute the visualizations/metrics seen in the notebook. 
     2. The Logistic Regression, Random Forest and Gradient Boosting Classifiers are packaged as separate pkl files and share a separate pipeline pkl object which should be used to transform the test data before prediction. Make sure that joblib package is imported:
      ```
      import joblib
