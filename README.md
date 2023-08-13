@@ -29,7 +29,7 @@ This repo contains the following folders:
 - [modeling](modeling): contains all of the models, training and evaluation notebooks.
 - [assets](assets): contains various project resources including visualization image files, a copy of the NOAA manual and data dictionary.
 
-You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to understand the sequencing of the notebooks
+You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to understand the sequencing of the notebooks for our project.
 
 
 ## Quick Start
