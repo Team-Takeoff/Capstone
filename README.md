@@ -34,7 +34,7 @@ You can reference this [link](assets/List%20of%20Notebooks%20-%20Process.pdf) to
 
 ## Quick Start
 
-1. We used a files.json file to make file location references easier using key-value pairs. All models and final training tests sets are included in the models and data folder respectively and their relative locations are documented in the files.json file in this repo. You may need to update these locations based on your project. Once done, it's a matter of just loading it from a specified path to the json file:
+1. We used a json file to make file location references easier using key-value pairs. All models and final training tests sets are included in the models and data folder respectively and their relative locations are documented in the files.json file in this repo. You may need to update these locations based on your project. Once done, it's a matter of just loading it from a specified path to the json file:
    
      ```import json
         path_to_files_json = 'path to files.json'
